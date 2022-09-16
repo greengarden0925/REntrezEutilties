@@ -1,5 +1,8 @@
 # REntrezEutilties
-Retrieve NCBI database (GEO) searched data summarries using Entrez e-utilties api via R code  
+Retrieve NCBI database (GEO) searched data summarries using Entrez e-utilties api via R code 
+
+# How to use?
+Download the R script file "1110915 query GEO summary.R" and run in your R software
 
 
 # The following is the  R script!
