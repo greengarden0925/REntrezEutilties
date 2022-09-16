@@ -3,21 +3,14 @@ Retrieve NCBI database (GEO) searched data summarries using Entrez e-utilties ap
 
 
 # The following is the  R script!
-
+```{r}
 install.packages("XML")
-
 install.packages(c("httr", "jsonlite"))
-
 library(httr)
-
 library(jsonlite)
-
 library(XML)
-
 library(rvest)
-
 library(dplyr)
-
 library(xml2 )
 
 ##用Entrez esearch api去抓查詢資料紀錄的UIDs (該筆資料在Entrez database的ID)
@@ -48,17 +41,17 @@ res
 xml.doc <- xmlParse(res)
 xml.doc
 
-#取出 XML 的根節點
+# 取出 XML 的根節點
 xml.top <- xmlRoot(xml.doc)
 xml.top
 
-#查看節點名稱
+# 查看節點名稱
 xmlName(xml.top)
 
-#查看子節點數量
+# 查看子節點數量
 xmlSize(xml.top)
 
-#查看子結點
+# 查看子結點
 names(xml.top)
 
 
@@ -79,5 +72,8 @@ dts[1:10,1:5]
 
 library(openxlsx)
 write.xlsx(dts,file="D:\\query.xlsx",rowNames=F,colNames=F)
+
+```
+
 
 
