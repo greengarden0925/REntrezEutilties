@@ -2,8 +2,7 @@
 Retrieve NCBI database (GEO) searched data summarries using Entrez e-utilties api via R code  
 
 
-The following is the  R script!
-###########################################
+# The following is the  R script!
 
 install.packages("XML")
 install.packages(c("httr", "jsonlite"))
@@ -42,17 +41,17 @@ res
 xml.doc <- xmlParse(res)
 xml.doc
 
-# 取出 XML 的根節點
+#取出 XML 的根節點
 xml.top <- xmlRoot(xml.doc)
 xml.top
 
-# 查看節點名稱
+#查看節點名稱
 xmlName(xml.top)
 
-# 查看子節點數量
+#查看子節點數量
 xmlSize(xml.top)
 
-# 查看子結點
+#查看子結點
 names(xml.top)
 
 
